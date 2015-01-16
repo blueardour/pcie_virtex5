@@ -1,0 +1,74 @@
+WARNING: 64bit architecture not detected. Defaulting to 32bit.
+
+****** PlanAhead v13.1
+  **** Build 117799 by hdbuild on Thu Feb 17 11:35:36 PST 2011
+    ** Copyright 1986-1999, 2001-2011 Xilinx, Inc. All Rights Reserved.
+
+INFO: [HD-Licensing 0] Attempting to get a license: PlanAhead
+INFO: [HD-Licensing 1] Got a license: PlanAhead
+INFO: [HD-ArchReader 0] Loading parts and site information from /local/debian7/ise13.1/ISE_DS/PlanAhead/parts/arch.xml
+INFO: [HD-RTPRIM 0] Parsing RTL primitives file '/local/debian7/ise13.1/ISE_DS/PlanAhead/parts/xilinx/rtl/prims/rtl_prims.xml'
+INFO: [HD-RTPRIM 1] Finished Parsing RTL primitives file '/local/debian7/ise13.1/ISE_DS/PlanAhead/parts/xilinx/rtl/prims/rtl_prims.xml'
+start_gui -source /home/debian/Workspace/fpga/ml509/pcie_virtex5_v1.0/pcie_demo_v1.0/ise_ise13.1/pa.fromNetlist.tcl
+starting gui ...
+/local/debian7/ise13.1/ISE_DS/common/bin/lin/_xilinxnotify: error while loading shared libraries: libgthread-2.0.so.0: cannot open shared object file: No such file or directory
+# create_project -name pcie_demo -dir "/home/debian/Workspace/fpga/ml509/pcie_virtex5_v1.0/pcie_demo_v1.0/ise_ise13.1/planAhead_run_1" -part xc5vlx110tff1136-1
+Parsing template File [/local/debian7/ise13.1/ISE_DS/ISE/data/projnav/templates/verilog.xml].
+Finished parsing template File [/local/debian7/ise13.1/ISE_DS/ISE/data/projnav/templates/verilog.xml].
+Parsing template File [/local/debian7/ise13.1/ISE_DS/ISE/data/projnav/templates/vhdl.xml].
+Finished parsing template File [/local/debian7/ise13.1/ISE_DS/ISE/data/projnav/templates/vhdl.xml].
+Parsing template File [/local/debian7/ise13.1/ISE_DS/ISE/data/projnav/templates/ucf.xml].
+Finished parsing template File [/local/debian7/ise13.1/ISE_DS/ISE/data/projnav/templates/ucf.xml].
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "/home/debian/Workspace/fpga/ml509/pcie_virtex5_v1.0/pcie_demo_v1.0/ise_ise13.1/XILINX_PCI_EXP_EP.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {/home/debian/Workspace/fpga/ml509/pcie_virtex5_v1.0/pcie_demo_v1.0/ise_ise13.1} }
+# set_param project.pinAheadLayout  yes
+# set_param project.paUcfFile  "/home/debian/Workspace/fpga/ml509/pcie_virtex5_v1.0/coregen_ise13.1/pcie_8k/example_design/xilinx_pci_exp_blk_plus_1_lane_ep_xc5vlx110t-ff1136-1.ucf"
+# add_files "/home/debian/Workspace/fpga/ml509/pcie_virtex5_v1.0/coregen_ise13.1/pcie_8k/example_design/xilinx_pci_exp_blk_plus_1_lane_ep_xc5vlx110t-ff1136-1.ucf" -fileset [get_property constrset [current_run]]
+# open_netlist_design
+INFO: Design is defaulting to constrset part: xc5vlx110tff1136-1
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design XILINX_PCI_EXP_EP.ngc ...
+WARNING:NetListWriters:298 - No output is written to XILINX_PCI_EXP_EP.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus trn_rbar_hit_n_c<6 : 0> on block
+   XILINX_PCI_EXP_EP is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file XILINX_PCI_EXP_EP.edif ...
+ngc2edif: Total memory usage is 24108 kilobytes
+
+Parsing EDIF File [./.Xil-PlanAhead-3929-dell-debian/ngc2edif/XILINX_PCI_EXP_EP.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3929-dell-debian/ngc2edif/XILINX_PCI_EXP_EP.edif]
+WARNING: [EDIF-96] Could not resolve non-primitive black box cell 'pcie_8k' defined in file 'XILINX_PCI_EXP_EP.ngc' instantiated as 'ep'.
+INFO: [HD-ArchReader 18] Reading macro library /local/debian7/ise13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5lx/hd_int_macros.edn
+Parsing EDIF File [/local/debian7/ise13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5lx/hd_int_macros.edn]
+Finished Parsing EDIF File [/local/debian7/ise13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5lx/hd_int_macros.edn]
+WARN: [HD-NETLIST 3] Netlist 'XILINX_PCI_EXP_EP' is not ideal for floorplanning, since the cellview 'XILINX_PCI_EXP_EP' defined in file 'XILINX_PCI_EXP_EP.ngc' contains large number of primitives. Please consider enabling hierarchy in synthesis before floorplan. You can enable hierarchy in XST by setting '-keep_hierarchy=yes' or '-netlist_hierarchy=rebuilt' flags.
+INFO: [HD-ArchReader 15] Reading bus macro file /local/debian7/ise13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/pr_bus_macros.xml
+INFO: [HD-ArchReader 7] Loading clock regions from /local/debian7/ise13.1/ISE_DS/PlanAhead/parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ClockRegion.xml
+INFO: [HD-ArchReader 8] Loading clock buffers from /local/debian7/ise13.1/ISE_DS/PlanAhead/parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ClockBuffers.xml
+INFO: [HD-ArchReader 3] Loading package from /local/debian7/ise13.1/ISE_DS/PlanAhead/parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ff1136/Package.xml
+INFO: [HD-ArchReader 4] Loading io standards from /local/debian7/ise13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/IOStandards.xml
+INFO: [HD-ArchReader 5] Loading pkg sso from /local/debian7/ise13.1/ISE_DS/PlanAhead/parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ff1136/SSORules.xml
+INFO: [HD-GDRC 0] Loading list of drcs for the architecture : /local/debian7/ise13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/drc.xml
+INFO: [HD-LIB 0] Reading timing library /local/debian7/ise13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5.lib .
+INFO: [HD-LIB 1] Done reading timing library /local/debian7/ise13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5.lib .
+Parsing UCF File [/home/debian/Workspace/fpga/ml509/pcie_virtex5_v1.0/coregen_ise13.1/pcie_8k/example_design/xilinx_pci_exp_blk_plus_1_lane_ep_xc5vlx110t-ff1136-1.ucf]
+INFO: [Designutils-22] PART constraint ignored, using PlanAhead selected device [/home/debian/Workspace/fpga/ml509/pcie_virtex5_v1.0/coregen_ise13.1/pcie_8k/example_design/xilinx_pci_exp_blk_plus_1_lane_ep_xc5vlx110t-ff1136-1.ucf:3]
+Finished Parsing UCF File [/home/debian/Workspace/fpga/ml509/pcie_virtex5_v1.0/coregen_ise13.1/pcie_8k/example_design/xilinx_pci_exp_blk_plus_1_lane_ep_xc5vlx110t-ff1136-1.ucf]
+WARNING: [Constraints-71] No definition for group 'MGTCLK' [/home/debian/Workspace/fpga/ml509/pcie_virtex5_v1.0/coregen_ise13.1/pcie_8k/example_design/xilinx_pci_exp_blk_plus_1_lane_ep_xc5vlx110t-ff1136-1.ucf:24]
+WARNING: [Constraints-65] Ignoring timing constraint since referred group or timespec is undefined [/home/debian/Workspace/fpga/ml509/pcie_virtex5_v1.0/coregen_ise13.1/pcie_8k/example_design/xilinx_pci_exp_blk_plus_1_lane_ep_xc5vlx110t-ff1136-1.ucf:24]
+INFO: [Designutils-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+Time (s): 10.700u 0.160s 7.400w. Memory (MB): 1353.152p 102.984g
+Time (s): 12.960u 0.220s 8.760w. Memory (MB): 1353.152p 118.000g
+exit
+INFO: [HD-Application 0] Exiting PlanAhead...
+INFO: [HD-Licensing 2] Releasing license: PlanAhead

@@ -1,0 +1,35 @@
+
+
+CONFIG PART = xc5vlx110t-ff1136-1;
+
+NET "sys_reset_n" IOSTANDARD = LVCMOS33;
+NET "sys_reset_n" PULLUP;
+NET "sys_reset_n" LOC = E9;
+NET "sys_reset_n" TIG;
+
+# PlanAhead Generated IO constraints 
+
+NET "pci_exp_txn[0]" IOSTANDARD = LVDS_25;
+NET "pci_exp_txp[0]" IOSTANDARD = LVDS_25;
+
+NET "sys_clk_p" IOSTANDARD = LVDS_25;
+NET "sys_clk_p" LOC = AF4;
+NET "sys_clk_n" IOSTANDARD = LVDS_25;
+NET "sys_clk_n" LOC = AF3;
+
+INST "refclk_ibuf" DIFF_TERM = "TRUE";
+
+INST "ep/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/GTD[0].GT_i" LOC = GTP_DUAL_X0Y2;
+INST "ep/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_retry/generate_sdp.ram_sdp_inst" LOC = RAMB36_X3Y12;
+INST "ep/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_tx/generate_tdp2[1].ram_tdp2_inst" LOC = RAMB36_X3Y11;
+INST "ep/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_rx/generate_tdp2[1].ram_tdp2_inst" LOC = RAMB36_X3Y10;
+INST "ep/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_tx/generate_tdp2[0].ram_tdp2_inst" LOC = RAMB36_X3Y9;
+INST "ep/pcie_ep0/pcie_blk/pcie_mim_wrapper_i/bram_tl_rx/generate_tdp2[0].ram_tdp2_inst" LOC = RAMB36_X3Y8;
+
+NET "sys_clk_c" PERIOD = 10 ns;
+NET "ep/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/gt_refclk_out" TNM_NET = "MGTCLK";
+TIMESPEC TS_MGTCLK = PERIOD "MGTCLK" 100 MHz HIGH 50 %;
+
+###############################################################################
+
+
